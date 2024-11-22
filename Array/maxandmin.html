@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        function findElement(a, length) {
+            let min = a[0];
+            let max = a[0];
+
+            for (let i = 0; i < length; i++) {
+                if (max < a[i]) {
+                    max = a[i];
+                }
+
+                if (min > a[i]) {
+                    min = a[i];
+                }
+
+           }
+
+           console.log("Maximum element is : "+max);
+           console.log("Minimum element is : "+min);
+        }
+
+        let arr = [3, 4, 2, 1, 5, 7, 3, 2];
+        let n = arr.length
+
+        let res = findElement(arr, n);
+    </script>
+</body>
+
+</html>

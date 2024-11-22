@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+             let arr = [23,43,23,67,89,23,12,23,23,89,24,12,56,12];
+
+                for(let i=0; i<arr.length; i++)
+                {
+                       let count = 0;
+                        let isCounted = false;
+                       for(let j = 0; j<i; j++)
+                       {
+                             if(arr[i] === arr[j])
+                             {
+                                   isCounted = true;
+                                    break;
+                             }  
+                       }
+
+                        if(!isCounted)
+                       {
+                           for(let k = 0; k<arr.length; k++)
+                           {
+                                  if(arr[i] === arr[k])
+                                    count++;
+                           }
+                           console.log(arr[i],count);
+                       }
+                     
+                    }
+
+                           
+                            
+                
+      </script>
+</body>
+</html

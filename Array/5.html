@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function findPeak() {
+        //     let arr = [1, 0, 1, 1, 0];
+        //     let j = 0;
+        //     for (let i = 1; i < arr.length; i++) {
+        //         if (arr[j] > arr[i]) {
+        //             return j;
+        //         }
+
+        //         if (arr[i] > arr[j] && arr[i] > arr[i + 1]) {
+        //             return i;
+        //         }
+
+        //         if (arr[arr.length - 1] > arr[arr.length - 2]) {
+        //             return arr.length;
+        //         }
+        //         j++;
+        //     } }
+        //          document.write(findPeak());
+
+             function findPeak(arr,n)
+             {
+                     if(n == 1)
+                     {
+                            return 0;
+                     }
+
+                      if(arr[0] > arr[1])
+                      {
+                             return 0;
+                      }
+
+                       if(arr[n-1] > arr[n-2])
+                       {
+                              return n-1;
+                       }
+
+                       for(let i = 1; i <n; i++)
+                       {
+                             if(arr[i] >= arr[i+1] && arr[i] >= arr[i-1])
+                               return i;
+                       }
+
+                       return 0;
+             }
+
+                let arr = [34,56,12,34,56,78,23,9,6];
+                 let n = arr.length;
+
+                    document.write("Index of Peak Point is : "+ findPeak(arr,n))
+                 
+    </script>
+</body>
+
+</html>

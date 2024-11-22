@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+               let arr = [4,5,3,7,8,2,1,98];
+              let k = 2;
+               let length = arr.length;
+          for(let i=0; i<arr.length; i++)
+          {
+              let temp;
+              for(let j=i+1; j<arr.length; j++)
+              {
+                    if(arr[i] >= arr[j])
+                    {
+                           temp = arr[i];
+                           arr[i] = arr[j]; 
+                            arr[j] = temp;
+                    }
+              }
+          }
+
+           document.write("Kth smallest element is : "+arr[k-1]);
+           document.write("<br>Kth largest element is :"+arr[(length-1)-k]);
+     </script>
+</body>
+</html>

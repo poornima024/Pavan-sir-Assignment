@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+            function checkAlpha(str)
+            {
+                        for(let i  = 0; i<str.length; i++)
+                        {
+                               ch =  str[i]
+                               if(!(ch >= 'a' && ch <= 'z'))
+                               {
+                                     return false;
+                               }
+                              
+                        }
+                        return true;
+            }
+
+
+             if(checkAlpha('password'))
+             {
+                    document.write("String has all Alphabets");
+             }
+
+             else 
+             {
+                    document.write("String has not all Alphabets");
+             }
+
+     </script>
+</body>
+</html>

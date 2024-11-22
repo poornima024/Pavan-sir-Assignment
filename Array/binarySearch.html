@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function binarySearch(arr,start,end,l)
+            {
+
+                while(start <= end)
+            {
+                let mid =  (start + end) / 2;
+
+                if(arr[mid] == l)
+            {
+                  return mid;
+            }
+
+               else if(arr[mid] > l)
+               {
+                       end = mid - 1;
+               }
+
+               else 
+               {
+                      start = 1 + mid;
+               }
+            }
+
+            return 0;
+        }
+
+               let arr = [10,20,34,110,340,2300];
+                let n = arr.length; 
+                let val = 20;  
+
+           if(binarySearch(arr,0,n,val))
+           {
+               console.log("found");
+               
+           }
+
+           else 
+           {
+              console.log("Not found");
+              
+           }
+             
+    </script>
+</body>
+</html>
